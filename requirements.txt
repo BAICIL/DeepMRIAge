@@ -1,0 +1,11 @@
+pytorch
+monai
+nibabel
+scikit-learn
+tensorflow (pip)
+torchvision 
+pandas
+
+
+
+

@@ -1,0 +1,27 @@
+IXI dataset is available for public usage under the Creative Commons CC BY-SA 3.0 license and can be downloaded at: https://brain-development.org/ixi-dataset/
+
+From IXI website:
+
+In this project we have collected nearly 600 MR images from normal, healthy subjects. The MR image acquisition protocol for each subject includes:
+
+T1, T2 and PD-weighted images
+MRA images
+Diffusion-weighted images (15 directions)
+The data has been collected at three different hospitals in London:
+
+Hammersmith Hospital using a Philips 3T system (details of scanner parameters)
+Guy’s Hospital using a Philips 1.5T system (details of scanner parameters)
+Institute of Psychiatry using a GE 1.5T system (details of the scan parameters not available at the moment)
+The data has been collected as part of the project:
+
+IXI – Information eXtraction from Images (EPSRC GR/S21533/02)
+The images in NIFTI format can be downloaded from here:
+
+T1 images (all images)
+T2 images (all images)
+PD images (all images)
+MRA images (all images)
+DTI images (all images, bvecs.txt, bvals.txt)
+Demographic information (spreadsheet)
+
+This data is made available under the Creative Commons CC BY-SA 3.0 license. If you use the IXI data please acknowledge the source of the IXI data, e.g. this website.
