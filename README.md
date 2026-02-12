@@ -17,7 +17,7 @@ We have implemented and tested the model on python 3.11. For installing dependen
 pip install git+https://github.com
 ```
 
-2) Use the "requirements.txt" file, and install depenendices:
+2) Use the "requirements.txt" file, and install dependencies:
 ```
 pip install -r requirements.txt
 ```
@@ -28,7 +28,7 @@ python3 setup.py
 ```
 
 ## Running The Package  
-The following commands will run the models on the included sample data from IXI dataset. The first command uses HeadAge model for predicatiing age from head images, the second one utilzes BrainAge model for predicatiing age from brain images, and the last one uses SkullAge model on skull images. **Keep in mind each model should be used only with the image type it was trained on, otherwise it will lead to inconsitent results**
+The following commands will run the models on the included sample data from IXI dataset. The first command uses HeadAge model for predicting age from head images, the second one utilizes BrainAge model for predicting age from brain images, and the last one uses SkullAge model on skull images. **Keep in mind each model should be used only with the image type it was trained on, otherwise it will lead to inconsistent results**
 ```
 python3 -u AgePredication_Final.py --inList "IXI_Head_Scan_Age--Input_List.csv"  --model "HeadAge" --ext "nii.gz" --out "IXI_Head_Scan_Age_predication_results"
 python3 -u AgePredication_Final.py --inList "IXI_Brain_Scan_Age--Input_List.csv"  --model "BrainAge" --ext "nii.gz" --out "IXI_Brain_Scan_Age_predication_results"
