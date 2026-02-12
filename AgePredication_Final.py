@@ -64,13 +64,13 @@ if args.model == None:
 args_model = args.model.lower()
 
 if args_model ==  "brainage":
-	model_ckpt = "BrainAge.ckpt"
+	model_ckpt = "./Model_Weights/BrainAge.ckpt"
 	
 elif args_model ==  "skullage":
-	model_ckpt = "SkullAge.ckpt"
+	model_ckpt = "./Model_Weights/SkullAge.ckpt"
 	
 elif args_model ==  "headage":
-	model_ckpt = "HeadAge.ckpt"
+	model_ckpt = "./Model_Weights/HeadAge.ckpt"
 	
 else:
 	print("Model name is not valid! Exiting!")

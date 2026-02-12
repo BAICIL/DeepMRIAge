@@ -1,0 +1,2 @@
+After processing raw T1 scans with FreeSurfer 7, "nu.mgz" files were used as brain image for training the HeadAge model and testing it. 
+The 10 sample head image files here are in nii.gz format, but mgz/nii/np formats can also be used as input to model.

@@ -1,1 +1,2 @@
-After processing raw T1 scans with FreeSurfer 7, brain.mgz file was used as brain image for training the BrainAge model and testing it. The included brain images are in nii.gz format, but the mgz format can also be used as input to model.
+After processing raw T1 scans with FreeSurfer 7, "brain.mgz" files were used as brain image for training the BrainAge model and testing it. 
+The 10 sample brain image files here are in nii.gz format, but mgz/nii/np formats can also be used as input to model.

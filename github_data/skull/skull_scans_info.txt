@@ -1,0 +1,3 @@
+After processing raw T1 scans with FreeSurfer 7, based on "nu.mgz" (head image) and "brain.mgz" (brain image), we extracted the skull portion (via python) and saved it to disk. 
+Those files were used as sjull images for training the SkullAge model and testing it. 
+The 10 sample skull image files here are in nii.gz format, but mgz/nii/np formats can also be used as input to model.
