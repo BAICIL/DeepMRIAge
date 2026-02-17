@@ -1,12 +1,13 @@
-# DeepMRIAge: Predicting Chronological Age based on 3D Brain MRI Images 
+# HBS-AgeNet: HeadBrainSkull-AgeNet
+# Predicting Chronological Age based on 3D Brain MRI Images from Head, Brain and Skull  
 ### Javad Sohankar (j.sohankar@bannerhealth.com)
 ### Banner Alzheimer's Institute, Phoenix, Arizona, US
 
 We trained three deep learning models (based on ResNet18 architecture) to predict chronological age from structural T1-weighted MRI scans. The three models (HeadAge, BrainAge, SkullAge) were trained based on three different types of MRI image: 1) Head (including skull and facial features), 2) Brain only, 3) Skull only. 
 
-Training process used data from five data sets (ABIDE, ICBM, IXI, NACC, OASIS; N=7932), and then evaluated on a separate dataset (ADNI, N=11007).
+Training process used data from five data sets (ABIDE, ICBM, IXI, NACC, OASIS; N=7932), and then evaluated on two separate dataset: 1) ADNI: Public & N=11007, 2) APOE1.0 & APOE2.0: Private & N=2100).
 
-First, raw T1-MRI scans were processed using FreeSurfer 7 software. For HeadAge model, “nu.mgz" files were used as head image for training and afterward evaluating it. Similarly, BrainAge model used “brain.mgz” files for training/evaluation.  For SkullAge model, we started with extracting the skull portion based on "nu.mgz" (head image) and "brain.mgz" (brain image), and saved them to disk. Afterwards these skull images were used for training and testing the SkullAge model.
+First, raw T1-MRI scans were processed using FreeSurfer 7 software. For HeadAge model, “nu.mgz" files were used as head image for training and afterward evaluating it. Similarly, BrainAge model used “brain.mgz” files for training/evaluation.  For SkullAge model, we started with extracting the skull portion (Extract_Skull.py script) based on "nu.mgz" (head image) and "brain.mgz" (brain image), and saved them to disk. Afterwards these skull images were used for training and testing the SkullAge model.
 
 ## Installation
 We have implemented and tested the model on python 3.11. For installing dependencies, you can choose between these three methods:
@@ -34,3 +35,9 @@ python3 -u AgePredication_Final.py --inList "IXI_Head_Scan_Age--Input_List.csv" 
 python3 -u AgePredication_Final.py --inList "IXI_Brain_Scan_Age--Input_List.csv"  --model "BrainAge" --ext "nii.gz" --out "IXI_Brain_Scan_Age_predication_results"
 python3 -u AgePredication_Final.py --inList "IXI_Skull_Scan_Age--Input_List.csv"  --model "SkullAge" --ext "nii.gz" --out "IXI_Skull_Scan_Age_predication_results"
 ```
+
+You can extract the skull for your data using Extract_Skull.py script.
+```
+python3 Extract_Skull.py --head nu.mgz --mask brain.mgz --out result
+```
+
